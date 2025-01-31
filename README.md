@@ -1,14 +1,14 @@
 # comote-koral
 
-## update
+## Update
 
-Run the script `update.command` (double-clik or run in terminal) in order to pull the changes, install the dependencies and build the `koral-server`.
+Run the script `update.command` (double-click or run in terminal) in order to pull the changes, install the dependencies and build the `koral-server`.
 
 ## Development notes
 
 Use `git pull` to retrieve the changes from the online repository. Use `git push`to send your changes to the online repository.
 
-When some changes are made in the webviews, sources in `koral-server-src`. Build and deploy changes to `koral-server` by running `npm run build-server` in the root of the project.
+When some changes are made in the webviews, sources are in `koral-server-src`. Build and deploy changes to `koral-server` by running `npm run build-server` in the root of the project.
 
 To make a version, you will need to retrieve the changes from the online repository, and to commit all you changes.
 

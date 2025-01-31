@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Double-click
+# directory of the script
 cd "$(dirname "$0")" || exit 0
 
 # build server

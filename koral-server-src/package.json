@@ -7,6 +7,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "build-server": "./max-build.bash",
     "build": "npm run clean && sass src/clients/styles:.build/public/css && soundworks-build -b",
     "clean": "soundworks-build -D",
     "dev": "npm run build && (concurrently -i -p \"none\" \"npm run watch:inspect server\" \"soundworks-build -b -w\" \"npm run watch:sass\")",
