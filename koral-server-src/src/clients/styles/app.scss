@@ -10,9 +10,11 @@
   --koral-gray-light: #d5d5d5;
   --koral-gray-normal: #929292;
   --koral-color-1: #6DE8AE;
+  --koral-color-1-dimmed: #254f3c;
   --koral-color-2: #FF9C66;
   --koral-color-3: #FAFAE2;
   --koral-bg-1: #7C2CFF;
+  --koral-bg-1-dimmed: #291051;
   --koral-bg-2: #171718;
   --koral-background: linear-gradient(var(--koral-bg-1), var(--koral-bg-2) calc(0.8 * (100vw - 2 * var(--koral-horizontal-margin))));
 
@@ -166,7 +168,7 @@ sc-button[disabled] {
 
   --sc-button-background-color: var(--koral-bg-1);
   --sc-button-background-color-hover: var(--koral-bg-1);
-  --sc-button-background-color-active: rgb(from var(--koral-bg-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
+  --sc-button-background-color-active: var(--koral-bg-1-dimmed);
 }
 .button.color2 {
   background-color: var(--koral-color-1);
@@ -174,7 +176,7 @@ sc-button[disabled] {
 
   --sc-button-background-color: var(--koral-color-1);
   --sc-button-background-color-hover: var(--koral-color-1);
-  --sc-button-background-color-active: rgb(from var(--koral-color-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
+  --sc-button-background-color-active: var(--koral-color-1-dimmed);
 }
 
 /* --------------------------------------------------------- */
