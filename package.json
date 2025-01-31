@@ -1,5 +1,10 @@
 {
-  "scripts": {
-    "build-server": "cd koral-server-src && ./max-build.sh"
+  "name": "comote-koral",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+    "scripts": {
+    "build-server": "./koral-server-src/max-build.bash",
+    "update": "git pull && npm run build-server",
+    "preversion": "npm run build-server"
   }
 }
