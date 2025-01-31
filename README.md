@@ -18,6 +18,8 @@ Then, you can use:
 - `npm version minor` to increment the middle number (eg. from `1.0.0` to  `1.1.0`)
 - `npm version major` to increment the first number (eg. from `1.0.0` to  `2.0.0`)
 
+Do not forget to `git push`.
+
 ## License
 
 [BSD-3-Clause](./LICENSE)
