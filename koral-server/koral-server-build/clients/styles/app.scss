@@ -165,7 +165,7 @@ sc-button[disabled] {
   color: var(--koral-color-3);
 
   --sc-button-background-color: var(--koral-bg-1);
-  --sc-button-background-color-hover: rgb(from var(--koral-bg-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
+  --sc-button-background-color-hover: var(--koral-bg-1);
   --sc-button-background-color-active: rgb(from var(--koral-bg-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
 }
 .button.color2 {
@@ -173,7 +173,7 @@ sc-button[disabled] {
   color: var(--koral-bg-2);
 
   --sc-button-background-color: var(--koral-color-1);
-  --sc-button-background-color-hover: rgb(from var(--koral-color-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
+  --sc-button-background-color-hover: var(--koral-color-1);
   --sc-button-background-color-active: rgb(from var(--koral-color-1) calc(r/1.5) calc(g/1.5) calc(b/1.5));
 }
 
@@ -197,7 +197,7 @@ sc-button[disabled] {
   background-size: calc(0.8 * 0.45 * (100vw - 2 * var(--koral-horizontal-margin)) );
   background-position: 50% 50%;
   background-repeat: no-repeat;
-} 
+}
 .zone.reset {
   height: 25%;
   background-color: var(--koral-color-2);
@@ -255,7 +255,6 @@ sc-button[disabled] {
 
 .row.kord {
   height: 90%;
-  padding-inline: 20px;
   align-content: center;
 }
 
@@ -267,7 +266,7 @@ sc-button[disabled] {
 .kord .kord-key {
   width: calc((100vw - 2 * var(--koral-horizontal-margin) - 40px) / 5);
   height: 100%;
-  
+
 }
 
 .kord .kord-key div {

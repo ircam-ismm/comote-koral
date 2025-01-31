@@ -31,6 +31,7 @@
     "@soundworks/build": "^1.0.0-alpha.1",
     "@soundworks/create": "^1.0.0-alpha.23",
     "concurrently": "^8.2.2",
+    "esbuild": "^0.24.2",
     "eslint": "^9.7.0",
     "sass": "^1.77.1"
   }

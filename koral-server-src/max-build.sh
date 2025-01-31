@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build server
-# npm install
+npm install
 npm run build
 
 # build server as cjs for Max

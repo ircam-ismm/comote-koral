@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "build-server": "cd koral-server-src && ./max-build.sh"
+  }
+}
