@@ -1,0 +1,391 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url(../../images/BricolageGrotesque.ttf);
+}
+:root {
+  --koral-font-family: "Bricolage Grotesque";
+  --koral-gray-light: #d5d5d5;
+  --koral-gray-normal: #929292;
+  --koral-color-1: #6DE8AE;
+  --koral-color-2: #FF9C66;
+  --koral-color-3: #FAFAE2;
+  --koral-bg-1: #7C2CFF;
+  --koral-bg-2: #171718;
+  --koral-background: linear-gradient(var(--koral-bg-1), var(--koral-bg-2) calc(0.8 * (100vw - 2 * var(--koral-horizontal-margin))));
+  --koral-horizontal-margin: 40px;
+  --koral-upper-margin: 55px;
+  --koral-lower-margin: 30px;
+  --koral-border-radius: 30px;
+  --koral-border-width: 2px;
+  --koral-vertical-gap: 20px;
+  --koral-slider-height: 30px;
+  --koral-icon-width: 25px;
+  --koral-klav-key-size: 50px;
+  --koral-footer-button-width: 40px;
+  --koral-footer-logo-maring: 10px;
+  --koral-footer-logo-ratio: 2.5;
+  --koral-settings-switch-height: 50px;
+  --koral-settings-switch-width: 110px;
+  --koral-settings-divider-width: 50px;
+}
+
+* {
+  font-family: var(--koral-font-family);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 10px;
+}
+
+.screen.bg {
+  background: var(--koral-background);
+}
+
+.screen.bg1 {
+  background-image: url(../../images/bg1.png);
+}
+
+.screen.bg2 {
+  background-image: url(../../images/bg2.png);
+}
+
+#main {
+  background-size: 100vw;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  padding: var(--koral-upper-margin) var(--koral-horizontal-margin) var(--koral-lower-margin) var(--koral-horizontal-margin);
+  gap: var(--koral-vertical-gap);
+}
+
+.instrument {
+  height: 100%;
+}
+
+.column {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column.buttons {
+  width: 45%;
+  height: auto;
+  aspect-ratio: 2/3;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.row.centered {
+  justify-content: center;
+}
+
+.row.slider {
+  height: var(--koral-slider-height);
+}
+
+.koral-slider {
+  position: relative;
+}
+
+.koral-slider.wide {
+  width: 100%;
+}
+
+.koral-slider.icons {
+  width: calc(100vw - 2 * var(--koral-horizontal-margin) - 2 * var(--koral-icon-width));
+  padding-inline: 10px;
+}
+
+.koral-slider sc-slider {
+  --sc-slider-background-color: srgb(0, 0, 0, 0);
+  --sc-slider-foreground-color: var(--koral-color-1);
+  height: var(--koral-slider-height);
+  width: 100%;
+  border-radius: calc(var(--koral-slider-height) / 2);
+  border-width: var(--koral-border-width);
+  border-color: var(--koral-color-1);
+}
+
+.koral-slider p {
+  width: 100%;
+  line-height: var(--koral-slider-height);
+  font-size: calc(var(--koral-slider-height) / 2);
+  text-align: right;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding-right: 20px;
+  color: var(--koral-gray-normal);
+}
+
+.icon {
+  height: var(--koral-slider-height);
+  width: var(--koral-icon-width);
+  background-size: var(--koral-icon-width);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+sc-button[disabled] {
+  background-color: var(--koral-gray-light) !important;
+}
+
+/* --------------------------------------------------------- */
+/* KBUTTON
+/* --------------------------------------------------------- */
+.button {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  border: none;
+  border-radius: var(--koral-border-radius);
+  font-family: var(--koral-font-family);
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.color1 {
+  background-color: var(--koral-bg-1);
+  color: var(--koral-color-3);
+  --sc-button-background-color: var(--koral-bg-1);
+  --sc-button-background-color-hover: color-mix(in srgb, var(--koral-bg-1) 80%, black);
+  --sc-button-background-color-active: color-mix(in srgb, var(--koral-bg-1) 80%, black);
+}
+
+.button.color2 {
+  background-color: var(--koral-color-1);
+  color: var(--koral-bg-2);
+  --sc-button-background-color: var(--koral-color-1);
+  --sc-button-background-color-hover: color-mix(in srgb, var(--koral-color-1) 80%, black);
+  --sc-button-background-color-active: color-mix(in srgb, var(--koral-color-1) 80%, black);
+}
+
+/* --------------------------------------------------------- */
+/* KGESTURE & KMOVE
+/* --------------------------------------------------------- */
+.zone {
+  width: 100%;
+  border: none;
+  border-radius: var(--koral-border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zone.set {
+  height: 66%;
+  background-color: var(--koral-color-1);
+  --sc-button-background-color: rgba(0, 0, 0, 0);
+  --sc-button-background-color-hover: rgba(0, 0, 0, 0);
+  --sc-button-background-color-active: rgba(0, 0, 0, 0.5);
+  background-size: calc(0.36 * (100vw - 2 * var(--koral-horizontal-margin)));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.zone.reset {
+  height: 25%;
+  background-color: var(--koral-color-2);
+  --sc-button-background-color: rgba(0, 0, 0, 0);
+  --sc-button-background-color-hover: rgba(0, 0, 0, 0);
+  --sc-button-background-color-active: rgba(0, 0, 0, 0.5);
+  background-size: calc(0.135 * (100vw - 2 * var(--koral-horizontal-margin)));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.zone.no-action {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  --sc-button-background-color: rgba(0, 0, 0, 0);
+  --sc-button-background-color-hover: rgba(0, 0, 0, 0);
+  --sc-button-background-color-active: rgba(0, 0, 0, 0);
+  background-size: calc(0.36 * (100vw - 2 * var(--koral-horizontal-margin)));
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------- */
+/* KPAD
+/* --------------------------------------------------------- */
+.kpad {
+  width: calc(100vw - 2 * var(--koral-horizontal-margin));
+  height: calc(100vw - 2 * var(--koral-horizontal-margin));
+  border-radius: var(--koral-border-radius);
+  overflow: hidden;
+  border: var(--koral-border-width) solid var(--koral-color-1);
+  background-color: var(--koral-bg-1);
+  --sc-dots-color: var(--koral-color-1);
+}
+
+/* --------------------------------------------------------- */
+/* KLAV
+/* --------------------------------------------------------- */
+.klav-key {
+  width: calc((100vw - 2 * var(--koral-horizontal-margin)) / 4);
+  height: 100%;
+  border-radius: 8px;
+  border: 2px solid #000000;
+  background-color: var(--koral-bg-1);
+}
+
+.klav-key.active {
+  background-color: var(--koral-color-1);
+}
+
+/* --------------------------------------------------------- */
+/* KORD
+/* --------------------------------------------------------- */
+.row.kord {
+  height: 90%;
+  padding-inline: 20px;
+  align-content: center;
+}
+
+.koral-kord .koral-slider {
+  height: var(--koral-slider-height);
+  margin-bottom: 20px;
+}
+
+.kord .kord-key {
+  width: calc((100vw - 2 * var(--koral-horizontal-margin) - 40px) / 5);
+  height: 100%;
+}
+
+.kord .kord-key div {
+  height: 100%;
+  width: 10px;
+  margin: 0 calc(((100vw - 2 * var(--koral-horizontal-margin)) / 5 - 20px) / 2);
+  background-color: var(--koral-bg-1);
+  border-radius: 7px;
+}
+
+.kord .kord-key.active div {
+  background-color: var(--koral-color-3);
+}
+
+.kord .kord-key:nth-child(1), .kord .kord-key:nth-child(3) {
+  flex: 1;
+}
+
+.kord .kord-key:nth-child(2) {
+  flex: 2;
+}
+
+.kord .kord-key:nth-child(2) div {
+  background-color: var(--koral-color-1);
+}
+
+.kord .kord-key.active:nth-child(2) div {
+  background-color: var(--koral-color-3);
+}
+
+.kord.kord-3 .kord-key div {
+  background-color: var(--koral-color-1);
+}
+
+.kord.kord-3 .kord-key.active div {
+  background-color: var(--koral-color-3);
+}
+
+.kord.kord-3 .kord-key:nth-child(2) div {
+  background-color: var(--koral-bg-1);
+}
+
+.kord.kord-3 .kord-key.active:nth-child(2) div {
+  background-color: var(--koral-color-3);
+}
+
+:root {
+  --sw-background-color: #000000;
+  --sw-medium-background-color: #121212;
+  --sw-light-background-color: #242424;
+  --sw-lighter-background-color: #363636;
+  --sw-font-color: #ffffff;
+  --sw-light-font-color: #cccccc;
+  --sw-font-color-error: #a94442;
+  --sw-font-family: Consolas, monaco, monospace;
+  --sw-font-size: 62.5%;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--sw-background-color);
+  color: var(--sw-font-color);
+}
+
+html {
+  font-size: var(--sw-font-size);
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.loading {
+  background-color: white;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.simple-layout {
+  display: block;
+  flex-grow: 1;
+  position: relative;
+  background-color: white;
+  color: black;
+}
+
+.controller-layout {
+  display: block;
+  flex-grow: 1;
+  position: relative;
+}
+.controller-layout > header {
+  display: block;
+  height: 38px;
+  line-height: 38px;
+  background-color: var(--sw-medium-background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--sw-lighter-background-color);
+}
+.controller-layout > header h1 {
+  font-size: 12px;
+  margin: 0;
+  padding-left: 20px;
+  max-width: 50%;
+  overflow: hidden;
+}
+.controller-layout > header sc-audit {
+  max-width: 50%;
+}
+.controller-layout > section {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=app.css.map */
