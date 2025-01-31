@@ -1,8 +1,8 @@
 {
   "name": "comote-koral",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "BSD-3-Clause",
-    "scripts": {
+  "scripts": {
     "build-server": "./koral-server-src/max-build.bash",
     "update": "git pull && npm run build-server",
     "preversion": "npm run build-server"
