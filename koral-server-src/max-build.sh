@@ -16,11 +16,11 @@ rm -rf max-build/koral-server-public
 cp -R public max-build/koral-server-public
 
 # copy assets to M4L folder
-rm -rf ../Live/M4L/koral-server/koral-server-build
-rm -rf ../Live/M4L/koral-server/koral-server-config
-rm -rf ../Live/M4L/koral-server/koral-server-public
-rm -f ../Live/M4L/koral-server/koral-server.cjs
-cp -R max-build/koral-server-build ../Live/M4L/koral-server
-cp -R max-build/koral-server-config ../Live/M4L/koral-server
-cp -R max-build/koral-server-public ../Live/M4L/koral-server
-cp max-build/koral-server.cjs ../Live/M4L/koral-server
+rm -rf ../koral-server/koral-server-build
+rm -rf ../koral-server/koral-server-config
+rm -rf ../koral-server/koral-server-public
+rm -f ../koral-server/koral-server.cjs
+cp -R max-build/koral-server-build ../koral-server
+cp -R max-build/koral-server-config ../koral-server
+cp -R max-build/koral-server-public ../koral-server
+cp max-build/koral-server.cjs ../koral-server

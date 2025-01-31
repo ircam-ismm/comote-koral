@@ -1,6 +1,0 @@
-name: koral-ui
-author: ""
-clients:
-  instruments:
-    target: browser
-    default: true

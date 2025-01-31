@@ -14,3 +14,5 @@ Thumbs.db
 
 # TLS certificates
 /**/*.pem
+
+/max-build
