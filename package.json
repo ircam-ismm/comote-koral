@@ -5,6 +5,6 @@
   "scripts": {
     "build-server": "./koral-server-src/max-build.bash",
     "update": "git pull && npm run build-server",
-    "preversion": "npm run build-server"
+    "preversion": "npm run update"
   }
 }
