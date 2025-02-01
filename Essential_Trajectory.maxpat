@@ -192,6 +192,7 @@
 					"patching_rect" : [ 577.0, 777.0, 41.0, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_invisible" : 2,
 							"parameter_longname" : "threshold[4]",
 							"parameter_mmax" : 200.0,
 							"parameter_mmin" : -100.0,
@@ -540,6 +541,7 @@
 					"patching_rect" : [ 463.0, 853.0, 41.0, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_invisible" : 2,
 							"parameter_longname" : "threshold[7]",
 							"parameter_mmax" : 100.0,
 							"parameter_modmode" : 0,
@@ -1027,6 +1029,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 268.0, 250.0, 18.0, 17.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 92.0, 1.0, 18.0, 17.0 ],
@@ -1340,7 +1343,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"color" : [ 0.694117647058824, 0.490196078431373, 0.133333333333333, 1.0 ],
