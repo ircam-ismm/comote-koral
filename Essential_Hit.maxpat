@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 1660.0, 969.0 ],
+		"rect" : [ 34.0, 100.0, 1165.0, 969.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -42,7 +42,7 @@
 				"box" : 				{
 					"comment" : "hit direction",
 					"id" : "obj-113",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -517,7 +517,7 @@
 ,
 					"text" : "manual",
 					"texton" : "auto",
-					"varname" : "live.text[3]"
+					"varname" : "live.text"
 				}
 
 			}
@@ -2664,7 +2664,7 @@
 				"box" : 				{
 					"comment" : "hit threshold",
 					"id" : "obj-39",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2676,7 +2676,7 @@
 				"box" : 				{
 					"comment" : "hit direction",
 					"id" : "obj-33",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2688,7 +2688,7 @@
 				"box" : 				{
 					"comment" : "hit",
 					"id" : "obj-27",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2712,7 +2712,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-13",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -3510,15 +3510,17 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 974.0, 481.0, 15.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
+							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
 							"parameter_longname" : "auto_threshold",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
-							"parameter_shortname" : "live.toggle",
+							"parameter_shortname" : "auto_threshold",
 							"parameter_type" : 2
 						}
 
@@ -4278,13 +4280,6 @@
 					"patching_rect" : [ 974.0, 534.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 138.5, 16.0, 51.0, 13.0 ],
-					"saved_attribute_attributes" : 					{
-						"bgcolor" : 						{
-							"expression" : ""
-						}
-
-					}
-,
 					"text" : "auto",
 					"texton" : "auto"
 				}
@@ -4345,14 +4340,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 205.0, 5.0, 4.0, 160.602272778749466 ],
 					"proportion" : 0.39,
-					"rounded" : 0,
-					"saved_attribute_attributes" : 					{
-						"bgfillcolor" : 						{
-							"expression" : ""
-						}
-
-					}
-
+					"rounded" : 0
 				}
 
 			}
@@ -4477,30 +4465,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-108",
-					"maxclass" : "live.numbox",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 253.124990344047546, 698.958306670188904, 44.0, 15.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_longname" : "live.numbox[19]",
-							"parameter_modmode" : 3,
-							"parameter_shortname" : "live.numbox",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 0
-						}
-
-					}
-,
-					"varname" : "live.numbox"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-95",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
@@ -4526,7 +4490,7 @@
 ,
 					"text" : "manual",
 					"texton" : "auto",
-					"varname" : "live.text"
+					"varname" : "live.text[1]"
 				}
 
 			}
@@ -11639,7 +11603,7 @@
 							"parameter_initial" : [ 1.0 ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "device_id[1]",
+							"parameter_longname" : "device_id",
 							"parameter_mmax" : 255.0,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "device_id",
@@ -12517,16 +12481,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-108", 0 ],
-					"order" : 1,
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-90", 1 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-29", 0 ]
 				}
 
@@ -13092,7 +13048,90 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-10" : [ "pitch[1]", "pitch", 0 ],
+			"obj-101" : [ "live.text[22]", "live.text", 0 ],
+			"obj-104" : [ "toggle_noteoff", "live.text", 0 ],
+			"obj-105" : [ "direction", "live.tab", 0 ],
+			"obj-115" : [ "velocity", "live.menu", 0 ],
+			"obj-15" : [ "live.numbox[18]", "live.numbox[1]", 0 ],
+			"obj-16" : [ "live.button[5]", "live.button", 0 ],
+			"obj-17" : [ "threshold[2]", "live.numbox", 0 ],
+			"obj-175" : [ "pitch", "pitch", 0 ],
+			"obj-18" : [ "live.button[10]", "live.button", 0 ],
+			"obj-19" : [ "live.button[3]", "live.button", 0 ],
+			"obj-21" : [ "live.button[4]", "live.button", 0 ],
+			"obj-23" : [ "live.button[9]", "live.button", 0 ],
+			"obj-24" : [ "live.button[8]", "live.button", 0 ],
+			"obj-37" : [ "live.button[7]", "live.button[6]", 0 ],
+			"obj-44" : [ "auto_threshold", "auto_threshold", 0 ],
+			"obj-47" : [ "live.tab[1]", "live.tab", 0 ],
+			"obj-5" : [ "threshold", "threshold", 0 ],
+			"obj-52" : [ "device_id", "device_id", 0 ],
+			"obj-69" : [ "inhibition[1]", "inhibition", 0 ],
+			"obj-7" : [ "inhibition", "inhibition", 0 ],
+			"obj-81" : [ "pitch[2]", "pitch", 0 ],
+			"obj-82" : [ "pitch[3]", "pitch", 0 ],
+			"obj-85" : [ "live.button[2]", "live.button[6]", 0 ],
+			"obj-95" : [ "live.text[24]", "live.text", 0 ],
+			"parameterbanks" : 			{
+				"0" : 				{
+					"index" : 0,
+					"name" : "",
+					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
+				}
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "koral_device_receive.maxpat",
+				"bootpath" : "~/Repositories/comote-koral",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "koral_hysteresis.maxpat",
+				"bootpath" : "~/Repositories/comote-koral",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "koral_initial_value.maxpat",
+				"bootpath" : "~/Repositories/comote-koral",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "koral_sample_delay.maxpat",
+				"bootpath" : "~/Repositories/comote-koral",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "koral_sample_speedgate.maxpat",
+				"bootpath" : "~/Repositories/comote-koral",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mubu.scroll.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "pipo.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

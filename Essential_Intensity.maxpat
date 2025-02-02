@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 417.0, 100.0, 1080.0, 954.0 ],
+		"rect" : [ 447.0, 100.0, 712.0, 954.0 ],
 		"bglocked" : 1,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -125,6 +125,7 @@
 						"valueof" : 						{
 							"parameter_initial" : [ 1.0 ],
 							"parameter_initial_enable" : 1,
+							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
 							"parameter_longname" : "log_base",
 							"parameter_modmode" : 3,
@@ -1792,7 +1793,7 @@
 					"sampleperiod" : 10.0,
 					"second_cursor_color" : [ 1.0, 0.7098039216, 0.1960784314, 1.0 ],
 					"second_cursor_size" : 2,
-					"second_cursor_value" : 1.0,
+					"second_cursor_value" : 0.0,
 					"second_cursor_visible" : 1,
 					"shape" : "lines"
 				}
@@ -2308,11 +2309,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 670.0, 742.0, 20.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 106.000001192092896, 30.659091532230377, 18.0, 118.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_invisible" : 2,
 							"parameter_longname" : "scale_max",
 							"parameter_mmax" : 1.0,
 							"parameter_modmode" : 3,
@@ -2342,11 +2345,13 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 558.0, 742.0, 20.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 67.000001192092896, 30.659091532230377, 18.0, 118.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_invisible" : 2,
 							"parameter_longname" : "scale_min",
 							"parameter_mmax" : 1.0,
 							"parameter_modmode" : 3,
@@ -3501,10 +3506,12 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "float" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 1163.0, 1112.0, 76.733551000000006, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "input", "smoothed" ],
+							"parameter_invisible" : 2,
 							"parameter_longname" : "output_continuous_mode",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
@@ -5211,13 +5218,27 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"parameter_enable" : 0,
+					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 448.0, 742.0, 20.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 86.000001192092896, 30.659091532230377, 18.0, 118.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 2,
+							"parameter_longname" : "multislider",
+							"parameter_mmax" : 1.0,
+							"parameter_modmode" : 3,
+							"parameter_shortname" : "multislider",
+							"parameter_type" : 0
+						}
+
+					}
+,
 					"setminmax" : [ 0.0, 1.0 ],
 					"setstyle" : 1,
-					"slidercolor" : [ 1.0, 0.7098039216, 0.1960784314, 1.0 ]
+					"slidercolor" : [ 1.0, 0.7098039216, 0.1960784314, 1.0 ],
+					"varname" : "multislider"
 				}
 
 			}
@@ -5315,7 +5336,8 @@
 					"setstyle" : 1,
 					"signed" : 1,
 					"slidercolor" : [ 0.4274509804, 0.8431372549, 1.0, 1.0 ],
-					"thickness" : 1
+					"thickness" : 1,
+					"varname" : "multislider[1]"
 				}
 
 			}
@@ -7594,6 +7616,7 @@
 			"obj-103" : [ "hysteresis_up", "hysteresis_up", 0 ],
 			"obj-104" : [ "hysteresis_down", "hysteresis_down", 0 ],
 			"obj-118" : [ "output_continuous_mode", "output_continuous_mode", 0 ],
+			"obj-12" : [ "multislider", "multislider", 0 ],
 			"obj-139" : [ "log_base", "live.numbox", 0 ],
 			"obj-170" : [ "output_on_mode", "output_on_mode", 0 ],
 			"obj-202::obj-14" : [ "Map[1]", "Map", 0 ],

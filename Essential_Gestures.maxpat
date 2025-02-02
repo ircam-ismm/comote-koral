@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 46.0, 129.0, 1032.0, 954.0 ],
+		"rect" : [ 228.0, 100.0, 1032.0, 954.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -5809,19 +5809,20 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 1365.0, 781.5, 50.0, 16.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "threshold[9]",
+							"parameter_invisible" : 2,
+							"parameter_longname" : "live.MIDI_velocity",
 							"parameter_modmode" : 0,
-							"parameter_shortname" : "live.numbox",
+							"parameter_shortname" : "live.MIDI_velocity",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
 
 					}
-,
-					"varname" : "threshold[3]"
+
 				}
 
 			}
@@ -9757,6 +9758,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
+					"parameter_mappable" : 0,
 					"patching_rect" : [ 914.0, 570.0, 55.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 256.0, 137.0, 40.0, 18.0 ],
@@ -9778,8 +9780,7 @@
 					}
 ,
 					"text" : "clear all",
-					"texton" : "validate",
-					"varname" : "live.text[3]"
+					"texton" : "validate"
 				}
 
 			}
@@ -10927,7 +10928,7 @@
 			"obj-27::obj-8" : [ "TargetMin[1]", "Min", 0 ],
 			"obj-27::obj-9" : [ "border[1]", "border", 0 ],
 			"obj-28" : [ "smooth", "smooth", 0 ],
-			"obj-286" : [ "threshold[9]", "live.numbox", 0 ],
+			"obj-286" : [ "live.MIDI_velocity", "live.MIDI_velocity", 0 ],
 			"obj-297" : [ "inhibition[4]", "inhibition", 0 ],
 			"obj-3" : [ "record_toggle", "live.toggle", 0 ],
 			"obj-43" : [ "input_selection[1]", "input_selection", 0 ],
