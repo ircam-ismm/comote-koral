@@ -57,7 +57,7 @@
 				"box" : 				{
 					"comment" : "gesture identified",
 					"id" : "obj-52",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -69,7 +69,7 @@
 				"box" : 				{
 					"comment" : "number of gestures recorded",
 					"id" : "obj-51",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -109,7 +109,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-48",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -749,7 +749,7 @@
 							"parameter_initial" : [ 0.0 ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "input_selection",
+							"parameter_longname" : "input_selection[2]",
 							"parameter_mmax" : 9,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "input_selection",
@@ -5814,7 +5814,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 2,
-							"parameter_longname" : "live.MIDI_velocity",
+							"parameter_longname" : "threshold[9]",
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.MIDI_velocity",
 							"parameter_type" : 0,
@@ -5822,7 +5822,8 @@
 						}
 
 					}
-
+,
+					"varname" : "live.numbox"
 				}
 
 			}
@@ -6732,7 +6733,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 746.0, 311.0, 75.0, 21.0 ],
-					"text" : "loadmess 1"
+					"text" : "loadmess 0"
 				}
 
 			}
@@ -7096,7 +7097,7 @@
 							"parameter_initial" : [ 1.0 ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "device_id",
+							"parameter_longname" : "device_id[2]",
 							"parameter_mmax" : 255.0,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "device_id",
@@ -9780,7 +9781,8 @@
 					}
 ,
 					"text" : "clear all",
-					"texton" : "validate"
+					"texton" : "validate",
+					"varname" : "live.text"
 				}
 
 			}
@@ -10870,367 +10872,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-100::obj-14" : [ "Map[12]", "Map", 0 ],
-			"obj-100::obj-28" : [ "Unmap[4]", "Unmap", 0 ],
-			"obj-100::obj-3" : [ "TargetMax[4]", "Max", 0 ],
-			"obj-100::obj-33" : [ "border[22]", "border", 0 ],
-			"obj-100::obj-4" : [ "mode[5]", "mode", 0 ],
-			"obj-100::obj-8" : [ "TargetMin[4]", "Min", 0 ],
-			"obj-100::obj-9" : [ "border[9]", "border", 0 ],
-			"obj-101::obj-14" : [ "Map[5]", "Map", 0 ],
-			"obj-101::obj-28" : [ "Unmap[5]", "Unmap", 0 ],
-			"obj-101::obj-3" : [ "TargetMax[5]", "Max", 0 ],
-			"obj-101::obj-33" : [ "border[23]", "border", 0 ],
-			"obj-101::obj-4" : [ "mode[7]", "mode", 0 ],
-			"obj-101::obj-8" : [ "TargetMin[5]", "Min", 0 ],
-			"obj-101::obj-9" : [ "border[24]", "border", 0 ],
-			"obj-102::obj-14" : [ "Map[6]", "Map", 0 ],
-			"obj-102::obj-28" : [ "Unmap[6]", "Unmap", 0 ],
-			"obj-102::obj-3" : [ "TargetMax[9]", "Max", 0 ],
-			"obj-102::obj-33" : [ "border[11]", "border", 0 ],
-			"obj-102::obj-4" : [ "mode[8]", "mode", 0 ],
-			"obj-102::obj-8" : [ "TargetMin[9]", "Min", 0 ],
-			"obj-102::obj-9" : [ "border[10]", "border", 0 ],
-			"obj-11::obj-14" : [ "Map[4]", "Map", 0 ],
-			"obj-11::obj-28" : [ "Unmap[3]", "Unmap", 0 ],
-			"obj-11::obj-3" : [ "TargetMax[3]", "Max", 0 ],
-			"obj-11::obj-33" : [ "border[8]", "border", 0 ],
-			"obj-11::obj-4" : [ "mode[4]", "mode", 0 ],
-			"obj-11::obj-8" : [ "TargetMin[3]", "Min", 0 ],
-			"obj-11::obj-9" : [ "border[7]", "border", 0 ],
-			"obj-123" : [ "use_comote_buttons", "input_bypass", 0 ],
-			"obj-140" : [ "input_selection", "input_selection", 0 ],
-			"obj-15" : [ "live.text[32]", "live.text", 0 ],
-			"obj-158::obj-14" : [ "Map[11]", "Map", 0 ],
-			"obj-158::obj-28" : [ "Unmap[11]", "Unmap", 0 ],
-			"obj-158::obj-3" : [ "TargetMax[7]", "Max", 0 ],
-			"obj-158::obj-33" : [ "border[20]", "border", 0 ],
-			"obj-158::obj-4" : [ "mode[6]", "mode", 0 ],
-			"obj-158::obj-8" : [ "TargetMin[7]", "Min", 0 ],
-			"obj-158::obj-9" : [ "border[21]", "border", 0 ],
-			"obj-16" : [ "overlap", "overlap", 0 ],
-			"obj-169" : [ "noteon_activate[11]", "noteon_activate", 0 ],
-			"obj-201" : [ "noteon_activate[4]", "noteon_activate", 0 ],
-			"obj-202" : [ "noteon_activate[10]", "noteon_activate", 0 ],
-			"obj-203" : [ "noteon_activate[5]", "noteon_activate", 0 ],
-			"obj-204" : [ "noteon_activate[6]", "noteon_activate", 0 ],
-			"obj-205" : [ "noteon_activate[7]", "noteon_activate", 0 ],
-			"obj-206" : [ "noteon_activate[12]", "noteon_activate", 0 ],
-			"obj-207" : [ "noteon_activate[9]", "noteon_activate", 0 ],
-			"obj-26" : [ "device_id", "device_id", 0 ],
-			"obj-27::obj-14" : [ "Map[1]", "Map", 0 ],
-			"obj-27::obj-28" : [ "Unmap[1]", "Unmap", 0 ],
-			"obj-27::obj-3" : [ "TargetMax[8]", "Max", 0 ],
-			"obj-27::obj-33" : [ "border[2]", "border", 0 ],
-			"obj-27::obj-4" : [ "mode[1]", "mode", 0 ],
-			"obj-27::obj-8" : [ "TargetMin[1]", "Min", 0 ],
-			"obj-27::obj-9" : [ "border[1]", "border", 0 ],
-			"obj-28" : [ "smooth", "smooth", 0 ],
-			"obj-286" : [ "live.MIDI_velocity", "live.MIDI_velocity", 0 ],
-			"obj-297" : [ "inhibition[4]", "inhibition", 0 ],
-			"obj-3" : [ "record_toggle", "live.toggle", 0 ],
-			"obj-43" : [ "input_selection[1]", "input_selection", 0 ],
-			"obj-47" : [ "clear", "live.toggle", 0 ],
-			"obj-6" : [ "live.button[12]", "live.button", 0 ],
-			"obj-76" : [ "preset_number[2]", "preset_number", 0 ],
-			"obj-77::obj-14" : [ "Map[3]", "Map", 0 ],
-			"obj-77::obj-28" : [ "Unmap[2]", "Unmap", 0 ],
-			"obj-77::obj-3" : [ "TargetMax[2]", "Max", 0 ],
-			"obj-77::obj-33" : [ "border[6]", "border", 0 ],
-			"obj-77::obj-4" : [ "mode[3]", "mode", 0 ],
-			"obj-77::obj-8" : [ "TargetMin[8]", "Min", 0 ],
-			"obj-77::obj-9" : [ "border[5]", "border", 0 ],
-			"obj-88" : [ "input_bypass", "input_bypass", 0 ],
-			"obj-90::obj-14" : [ "Map[2]", "Map", 0 ],
-			"obj-90::obj-28" : [ "Unmap[12]", "Unmap", 0 ],
-			"obj-90::obj-3" : [ "TargetMax[1]", "Max", 0 ],
-			"obj-90::obj-33" : [ "border[3]", "border", 0 ],
-			"obj-90::obj-4" : [ "mode[2]", "mode", 0 ],
-			"obj-90::obj-8" : [ "TargetMin[2]", "Min", 0 ],
-			"obj-90::obj-9" : [ "border[4]", "border", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"parameter_overrides" : 			{
-				"obj-100::obj-14" : 				{
-					"parameter_longname" : "Map[12]"
-				}
-,
-				"obj-100::obj-28" : 				{
-					"parameter_longname" : "Unmap[4]"
-				}
-,
-				"obj-100::obj-3" : 				{
-					"parameter_longname" : "TargetMax[4]"
-				}
-,
-				"obj-100::obj-33" : 				{
-					"parameter_longname" : "border[22]"
-				}
-,
-				"obj-100::obj-4" : 				{
-					"parameter_longname" : "mode[5]"
-				}
-,
-				"obj-100::obj-8" : 				{
-					"parameter_longname" : "TargetMin[4]"
-				}
-,
-				"obj-100::obj-9" : 				{
-					"parameter_longname" : "border[9]"
-				}
-,
-				"obj-101::obj-14" : 				{
-					"parameter_longname" : "Map[5]"
-				}
-,
-				"obj-101::obj-28" : 				{
-					"parameter_longname" : "Unmap[5]"
-				}
-,
-				"obj-101::obj-3" : 				{
-					"parameter_longname" : "TargetMax[5]"
-				}
-,
-				"obj-101::obj-33" : 				{
-					"parameter_longname" : "border[23]"
-				}
-,
-				"obj-101::obj-4" : 				{
-					"parameter_longname" : "mode[7]"
-				}
-,
-				"obj-101::obj-8" : 				{
-					"parameter_longname" : "TargetMin[5]"
-				}
-,
-				"obj-101::obj-9" : 				{
-					"parameter_longname" : "border[24]"
-				}
-,
-				"obj-102::obj-14" : 				{
-					"parameter_longname" : "Map[6]"
-				}
-,
-				"obj-102::obj-28" : 				{
-					"parameter_longname" : "Unmap[6]"
-				}
-,
-				"obj-102::obj-3" : 				{
-					"parameter_longname" : "TargetMax[9]"
-				}
-,
-				"obj-102::obj-33" : 				{
-					"parameter_longname" : "border[11]"
-				}
-,
-				"obj-102::obj-4" : 				{
-					"parameter_longname" : "mode[8]"
-				}
-,
-				"obj-102::obj-8" : 				{
-					"parameter_longname" : "TargetMin[9]"
-				}
-,
-				"obj-102::obj-9" : 				{
-					"parameter_longname" : "border[10]"
-				}
-,
-				"obj-11::obj-14" : 				{
-					"parameter_longname" : "Map[4]"
-				}
-,
-				"obj-11::obj-28" : 				{
-					"parameter_longname" : "Unmap[3]"
-				}
-,
-				"obj-11::obj-3" : 				{
-					"parameter_longname" : "TargetMax[3]"
-				}
-,
-				"obj-11::obj-33" : 				{
-					"parameter_longname" : "border[8]"
-				}
-,
-				"obj-11::obj-4" : 				{
-					"parameter_longname" : "mode[4]"
-				}
-,
-				"obj-11::obj-8" : 				{
-					"parameter_longname" : "TargetMin[3]"
-				}
-,
-				"obj-11::obj-9" : 				{
-					"parameter_longname" : "border[7]"
-				}
-,
-				"obj-27::obj-14" : 				{
-					"parameter_longname" : "Map[1]"
-				}
-,
-				"obj-27::obj-28" : 				{
-					"parameter_longname" : "Unmap[1]"
-				}
-,
-				"obj-27::obj-3" : 				{
-					"parameter_longname" : "TargetMax[8]"
-				}
-,
-				"obj-27::obj-33" : 				{
-					"parameter_longname" : "border[2]"
-				}
-,
-				"obj-27::obj-4" : 				{
-					"parameter_longname" : "mode[1]"
-				}
-,
-				"obj-27::obj-8" : 				{
-					"parameter_longname" : "TargetMin[1]"
-				}
-,
-				"obj-27::obj-9" : 				{
-					"parameter_longname" : "border[1]"
-				}
-,
-				"obj-77::obj-14" : 				{
-					"parameter_longname" : "Map[3]"
-				}
-,
-				"obj-77::obj-28" : 				{
-					"parameter_longname" : "Unmap[2]"
-				}
-,
-				"obj-77::obj-3" : 				{
-					"parameter_longname" : "TargetMax[2]"
-				}
-,
-				"obj-77::obj-33" : 				{
-					"parameter_longname" : "border[6]"
-				}
-,
-				"obj-77::obj-4" : 				{
-					"parameter_longname" : "mode[3]"
-				}
-,
-				"obj-77::obj-8" : 				{
-					"parameter_longname" : "TargetMin[8]"
-				}
-,
-				"obj-77::obj-9" : 				{
-					"parameter_longname" : "border[5]"
-				}
-,
-				"obj-90::obj-14" : 				{
-					"parameter_longname" : "Map[2]"
-				}
-,
-				"obj-90::obj-28" : 				{
-					"parameter_longname" : "Unmap[12]"
-				}
-,
-				"obj-90::obj-3" : 				{
-					"parameter_longname" : "TargetMax[1]"
-				}
-,
-				"obj-90::obj-33" : 				{
-					"parameter_longname" : "border[3]"
-				}
-,
-				"obj-90::obj-4" : 				{
-					"parameter_longname" : "mode[2]"
-				}
-,
-				"obj-90::obj-8" : 				{
-					"parameter_longname" : "TargetMin[2]"
-				}
-,
-				"obj-90::obj-9" : 				{
-					"parameter_longname" : "border[4]"
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "imubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "koral_MapButton.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_device_receive.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_gui_definitions.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_initial_value.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_sample_delay.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_sample_speedgate.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mubu.hhmm.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.record.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.track.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "multimap-unmap.svg",
-				"bootpath" : "C74:/packages/Max for Live/media",
-				"type" : "svg",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

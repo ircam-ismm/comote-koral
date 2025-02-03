@@ -42,7 +42,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-27",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -94,7 +94,7 @@
 				"box" : 				{
 					"comment" : "trajectory",
 					"id" : "obj-44",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -106,7 +106,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -143,7 +143,7 @@
 							"parameter_enum" : [ "off", "on" ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "clear",
+							"parameter_longname" : "clear[4]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "live.toggle",
@@ -695,7 +695,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "input_selection",
+							"parameter_longname" : "input_selection[6]",
 							"parameter_mmax" : 2,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "input_selection",
@@ -743,7 +743,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 541.0, 288.0, 74.0, 21.0 ],
-					"text" : "loadmess 1"
+					"text" : "loadmess 0"
 				}
 
 			}
@@ -903,7 +903,7 @@
 							"parameter_initial" : [ 1 ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "use_comote_buttons",
+							"parameter_longname" : "use_comote_buttons[4]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "input_bypass",
@@ -1044,7 +1044,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "input_bypass",
+							"parameter_longname" : "input_bypass[1]",
 							"parameter_mmax" : 1,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "input_bypass",
@@ -1223,7 +1223,7 @@
 							"parameter_initial" : [ 1.0 ],
 							"parameter_invisible" : 2,
 							"parameter_linknames" : 1,
-							"parameter_longname" : "device_id",
+							"parameter_longname" : "device_id[4]",
 							"parameter_mmax" : 255.0,
 							"parameter_modmode" : 0,
 							"parameter_shortname" : "device_id",
@@ -4422,127 +4422,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-10" : [ "threshold[5]", "threshold", 0 ],
-			"obj-11" : [ "validate", "live.toggle", 0 ],
-			"obj-123" : [ "use_comote_buttons", "input_bypass", 0 ],
-			"obj-14" : [ "live.text[29]", "live.text", 0 ],
-			"obj-140" : [ "input_selection", "input_selection", 0 ],
-			"obj-147" : [ "live.text[28]", "live.text", 0 ],
-			"obj-16" : [ "threshold[3]", "threshold", 0 ],
-			"obj-165" : [ "threshold[7]", "threshold", 0 ],
-			"obj-26" : [ "device_id", "device_id", 0 ],
-			"obj-4" : [ "preset_number[3]", "preset_number", 0 ],
-			"obj-45" : [ "clear", "live.toggle", 0 ],
-			"obj-48::obj-14" : [ "Map[1]", "Map", 0 ],
-			"obj-48::obj-28" : [ "Unmap[1]", "Unmap", 0 ],
-			"obj-48::obj-3" : [ "TargetMax[8]", "Max", 0 ],
-			"obj-48::obj-33" : [ "border[1]", "border", 0 ],
-			"obj-48::obj-4" : [ "mode[4]", "mode", 0 ],
-			"obj-48::obj-8" : [ "TargetMin[1]", "Min", 0 ],
-			"obj-48::obj-9" : [ "border[7]", "border", 0 ],
-			"obj-5" : [ "threshold[4]", "threshold", 0 ],
-			"obj-50::obj-14" : [ "Map[4]", "Map", 0 ],
-			"obj-50::obj-28" : [ "Unmap[3]", "Unmap", 0 ],
-			"obj-50::obj-3" : [ "TargetMax[7]", "Max", 0 ],
-			"obj-50::obj-33" : [ "border[6]", "border", 0 ],
-			"obj-50::obj-4" : [ "mode[3]", "mode", 0 ],
-			"obj-50::obj-8" : [ "TargetMin[7]", "Min", 0 ],
-			"obj-50::obj-9" : [ "border[5]", "border", 0 ],
-			"obj-67" : [ "threshold[1]", "threshold", 0 ],
-			"obj-88" : [ "input_bypass", "input_bypass", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"parameter_overrides" : 			{
-				"obj-48::obj-14" : 				{
-					"parameter_longname" : "Map[1]"
-				}
-,
-				"obj-48::obj-28" : 				{
-					"parameter_longname" : "Unmap[1]"
-				}
-,
-				"obj-48::obj-3" : 				{
-					"parameter_longname" : "TargetMax[8]"
-				}
-,
-				"obj-48::obj-33" : 				{
-					"parameter_longname" : "border[1]"
-				}
-,
-				"obj-48::obj-4" : 				{
-					"parameter_longname" : "mode[4]"
-				}
-,
-				"obj-48::obj-8" : 				{
-					"parameter_longname" : "TargetMin[1]"
-				}
-,
-				"obj-48::obj-9" : 				{
-					"parameter_longname" : "border[7]"
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "koral_MapButton2.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_device_receive.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_gui_definitions.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "koral_initial_value.maxpat",
-				"bootpath" : "~/Repositories/comote-koral",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mubu.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "mubu.track.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "multimap-unmap.svg",
-				"bootpath" : "C74:/packages/Max for Live/media",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "pipo.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
