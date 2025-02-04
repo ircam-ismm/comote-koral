@@ -35476,7 +35476,9 @@ var EnterExitControllerGlobalHandler = /*#__PURE__*/function () {
     value: function addComponent(component, options) {
       options = _objectSpread({
         active: false,
-        touchId: null
+        touchId: null,
+        clientX: null,
+        clientY: null
       }, options);
       this.components.set(component, options);
       component.addEventListener('mousedown', this.onMouseDown);
@@ -35484,8 +35486,8 @@ var EnterExitControllerGlobalHandler = /*#__PURE__*/function () {
     }
   }, {
     key: "removeComponent",
-    value: function removeComponent(component, options) {
-      this.components["delete"](component, options);
+    value: function removeComponent(component) {
+      this.components["delete"](component);
       component.removeEventListener('mousedown', this.onMouseDown);
       component.removeEventListener('touchstart', this.onTouchStart);
     }
@@ -35575,28 +35577,42 @@ var EnterExitControllerGlobalHandler = /*#__PURE__*/function () {
     key: "onTouchEnd",
     value: function onTouchEnd(e) {
       e.preventDefault();
-      var _iterator3 = _createForOfIteratorHelper(e.changedTouches),
+
+      // @note - we don't use `e.changedTouches` here because Safari tends to swallow
+      // some touch end events, if two of them appear at the same time
+      // cf. https://github.com/ircam-ismm/sc-components/issues/60
+      var _iterator3 = _createForOfIteratorHelper(this.components.entries()),
         _step3;
       try {
         for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-          var touch = _step3.value;
-          var _iterator4 = _createForOfIteratorHelper(this.components.entries()),
+          var _step3$value = _slicedToArray(_step3.value, 2),
+            _component = _step3$value[0],
+            options = _step3$value[1];
+          var isPressed = false;
+
+          // `e.touches` is a list of information for every finger currently touching the screen.
+          var _iterator4 = _createForOfIteratorHelper(e.touches),
             _step4;
           try {
             for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-              var _step4$value = _slicedToArray(_step4.value, 2),
-                _component = _step4$value[0],
-                options = _step4$value[1];
+              var touch = _step4.value;
               if (options.active && options.touchId === touch.identifier) {
-                options.active = false;
-                options.touchId = null;
-                options.onExit(touch.clientX, touch.clientY);
+                isPressed = true;
               }
             }
           } catch (err) {
             _iterator4.e(err);
           } finally {
             _iterator4.f();
+          }
+          if (!isPressed && options.active) {
+            var clientX = options.clientX,
+              clientY = options.clientY;
+            options.active = false;
+            options.touchId = null;
+            options.clientX = null;
+            options.clientY = null;
+            options.onExit(clientX, clientY);
           }
         }
 
@@ -35634,10 +35650,15 @@ var EnterExitControllerGlobalHandler = /*#__PURE__*/function () {
               if (inZone && !options.active) {
                 options.active = true;
                 options.touchId = touch.identifier;
+                // store clientX and clientY so we can use them in touchend workaround
+                options.clientX = touch.clientX;
+                options.clientY = touch.clientY;
                 options.onEnter(touch.clientX, touch.clientY);
               } else if (options.active && options.touchId === touch.identifier && !inZone) {
                 options.active = false;
                 options.touchId = null;
+                options.clientX = null;
+                options.clientY = null;
                 options.onExit(touch.clientX, touch.clientY);
               }
             }
@@ -35677,7 +35698,7 @@ var EnterExitController = /*#__PURE__*/function () {
   }, {
     key: "hostDisconnected",
     value: function hostDisconnected() {
-      enterExitControllerGlobalHandler.removeComponent(this.host, this.options);
+      enterExitControllerGlobalHandler.removeComponent(this.host);
     }
   }]);
 }();

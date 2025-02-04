@@ -18,7 +18,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@ircam/sc-components": "^3.2.5",
+    "@ircam/sc-components": "^3.2.6",
     "@soundworks/core": "^4.0.0-alpha.28",
     "@soundworks/helpers": "^1.0.0-alpha.12",
     "express": "^4.19.2",
