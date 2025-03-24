@@ -2,42 +2,18 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 8,
-			"minor" : 6,
-			"revision" : 2,
+			"major" : 9,
+			"minor" : 0,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
 		"openrect" : [ -542.0, -993.0, 319.0, 441.0 ],
-		"bglocked" : 0,
 		"openinpresentation" : 1,
-		"default_fontsize" : 12.0,
-		"default_fontface" : 0,
-		"default_fontname" : "Arial",
-		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 1,
-		"objectsnaponopen" : 1,
-		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
-		"lefttoolbarpinned" : 0,
-		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
-		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
-		"tallnewobj" : 0,
-		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
 		"devicewidth" : 319.0,
-		"description" : "",
-		"digest" : "",
-		"tags" : "",
-		"style" : "",
-		"subpatcher_template" : "",
-		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-35",
@@ -477,16 +453,23 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 116.0, 240.0, 211.0, 22.0 ],
+					"patching_rect" : [ 116.0, 240.0, 205.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
 						"node_bin_path" : "",
 						"npm_bin_path" : "",
-						"watch" : 1
+						"watch" : 0
 					}
 ,
-					"text" : "node.script comote-connect-server.cjs"
+					"text" : "node.script comote-connect-server.js",
+					"textfile" : 					{
+						"filename" : "comote-connect-server.js",
+						"flags" : 0,
+						"embed" : 0,
+						"autowatch" : 1
+					}
+
 				}
 
 			}
@@ -505,6 +488,7 @@
 			}
 , 			{
 				"box" : 				{
+					"disablefind" : 0,
 					"id" : "obj-2",
 					"maxclass" : "jweb",
 					"numinlets" : 1,
@@ -792,7 +776,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 317.5, 269.0, 603.5, 269.0 ],
+					"midpoints" : [ 311.5, 269.0, 603.5, 269.0 ],
 					"order" : 0,
 					"source" : [ "obj-5", 1 ]
 				}
@@ -843,16 +827,17 @@
 
 			}
  ],
+		"originid" : "pat-483",
 		"dependency_cache" : [ 			{
 				"name" : "comote-connect-resize.js",
-				"bootpath" : "~/Repositories/koral/Live/M4L",
+				"bootpath" : "~/Repositories/comote-koral",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "comote-connect-server.cjs",
-				"bootpath" : "~/Repositories/koral/Live/M4L",
+				"name" : "comote-connect-server.js",
+				"bootpath" : "~/Repositories/comote-koral",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1

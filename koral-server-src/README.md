@@ -54,5 +54,5 @@ etc.
 ## Build for Max
 
 ```sh
-npx esbuild src/server/index.js --bundle --format=cjs --minify --external:max-api --platform=node --outfile=koral-server.cjs
+npx esbuild src/server/index.js --bundle --format=cjs --minify --external:max-api --platform=node --outfile=koral-server.js
 ```
