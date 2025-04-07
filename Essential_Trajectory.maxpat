@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 6,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -1313,13 +1313,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 6,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 177.0, 129.0, 1452.0, 954.0 ],
+						"rect" : [ 177.0, 129.0, 924.0, 954.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1347,7 +1347,20 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 587.0, 52.0, 68.0, 22.0 ],
+									"text" : "deferlow"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"color" : [ 0.694117647058824, 0.490196078431373, 0.133333333333333, 1.0 ],
 									"id" : "obj-8",
@@ -1378,7 +1391,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 530.319901573657944, 28.5, 100.0, 22.0 ],
+									"patching_rect" : [ 587.0, 23.0, 100.0, 22.0 ],
 									"text" : "loadmess clear"
 								}
 
@@ -1419,7 +1432,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 6,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2204,10 +2217,24 @@
 												}
 
 											}
- ]
+ ],
+										"saved_attribute_attributes" : 										{
+											"default_plcolor" : 											{
+												"expression" : ""
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 169.0, 819.0, 84.466018259525299, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"default_plcolor" : 										{
+											"expression" : ""
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2229,7 +2256,7 @@
 									"numinlets" : 6,
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
-									"patching_rect" : [ 484.319901573657944, 74.5, 283.337992131710052, 24.0 ],
+									"patching_rect" : [ 484.319901573657944, 84.0, 283.337992131710052, 24.0 ],
 									"text" : "route bypass clear validate fromdict todict"
 								}
 
@@ -2329,7 +2356,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 264.6875, 739.0, 168.932036519050598, 21.0 ],
 									"saved_object_attributes" : 									{
-										"verbose" : 1
+										"verbose" : 0
 									}
 ,
 									"text" : "mubu.track ---trajectory input_n"
@@ -2362,7 +2389,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 6,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2522,10 +2549,24 @@
 												}
 
 											}
- ]
+ ],
+										"saved_attribute_attributes" : 										{
+											"default_plcolor" : 											{
+												"expression" : ""
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 627.0, 269.0, 48.543688654899597, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"default_plcolor" : 										{
+											"expression" : ""
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -2609,7 +2650,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 485.6875, 739.0, 153.0, 21.0 ],
 									"saved_object_attributes" : 									{
-										"verbose" : 1
+										"verbose" : 0
 									}
 ,
 									"text" : "mubu.track ---trajectory norm"
@@ -2665,7 +2706,7 @@
 										"appversion" : 										{
 											"major" : 8,
 											"minor" : 6,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2879,10 +2920,24 @@
 												}
 
 											}
- ]
+ ],
+										"saved_attribute_attributes" : 										{
+											"default_plcolor" : 											{
+												"expression" : ""
+											}
+
+										}
+
 									}
 ,
 									"patching_rect" : [ 136.0, 264.0, 48.543688654899597, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"default_plcolor" : 										{
+											"expression" : ""
+										}
+
+									}
+,
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -3130,7 +3185,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 43.6875, 738.0, 153.0, 21.0 ],
 									"saved_object_attributes" : 									{
-										"verbose" : 1
+										"verbose" : 0
 									}
 ,
 									"text" : "mubu.track ---trajectory input"
@@ -3313,6 +3368,13 @@
 									"destination" : [ "obj-96", 0 ],
 									"order" : 0,
 									"source" : [ "obj-1", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"source" : [ "obj-10", 0 ]
 								}
 
 							}
@@ -3691,7 +3753,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
+									"destination" : [ "obj-10", 0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
@@ -3763,10 +3825,24 @@
 								}
 
 							}
- ]
+ ],
+						"saved_attribute_attributes" : 						{
+							"default_plcolor" : 							{
+								"expression" : ""
+							}
+
+						}
+
 					}
 ,
 					"patching_rect" : [ 269.0, 657.0, 375.0, 21.0 ],
+					"saved_attribute_attributes" : 					{
+						"default_plcolor" : 						{
+							"expression" : ""
+						}
+
+					}
+,
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -4422,7 +4498,14 @@
 				}
 
 			}
- ]
+ ],
+		"saved_attribute_attributes" : 		{
+			"default_plcolor" : 			{
+				"expression" : ""
+			}
+
+		}
+
 	}
 
 }
