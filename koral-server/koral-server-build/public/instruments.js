@@ -35855,7 +35855,7 @@ if (!globalThis[midiLearnSymbol]) {
     return _createClass(child, [{
       key: "render",
       value: function render() {
-        var template = _superPropGet(child, "render", this, 3)([]);
+        var inner = _superPropGet(child, "render", this, 3)([]);
         if (this.midiLearnActive) {
           var stateClass = 'idle';
           if (this.midiControlInfos) {
@@ -35870,10 +35870,10 @@ if (!globalThis[midiLearnSymbol]) {
             learning: this.midiLearnSelected,
             highlight: this.midiControlHighlight
           };
-          return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n          <div class=\"", "\">\n            ", "\n          </div>\n          ", "\n        "])), (0,lit_directives_class_map_js__WEBPACK_IMPORTED_MODULE_1__.classMap)(classes), this.midiControlInfos ? (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["<span>cc ", " - ", "</span>"])), this.midiControlInfos.channel, this.midiControlInfos.deviceString) : lit__WEBPACK_IMPORTED_MODULE_0__.nothing, template);
+          return (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n          <div class=\"", "\">\n            ", "\n          </div>\n          ", "\n        "])), (0,lit_directives_class_map_js__WEBPACK_IMPORTED_MODULE_1__.classMap)(classes), this.midiControlInfos ? (0,lit__WEBPACK_IMPORTED_MODULE_0__.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["<span>cc ", " - ", "</span>"])), this.midiControlInfos.channel, this.midiControlInfos.deviceString) : lit__WEBPACK_IMPORTED_MODULE_0__.nothing, inner);
         } else {
           this.midiControlHighlight = false;
-          return template;
+          return inner;
         }
       }
     }]);
